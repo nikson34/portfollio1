@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+      body {
+         background-color: rgb(12, 0, 0);
+      }
+
+      .main-container {
+         border: 1px solid;
+         background-color: rgb(10, 10, 9);
+         height: 105vh;
+         border-color: rgb(49, 48, 48);
+         border-width: 0px;
+         position: relative;
+      }
+
+      .nevbar {
+         color: rgb(14, 9, 4);
+         font-size: 20px;
+         display: flex;
+      }
+
+      .anchors1 {
+         color: rgb(231, 9, 9);
+         text-decoration: none;
+         font-size: 20px;
+         margin-left: 30vh;
+         margin-top: 10vh;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .anchors1:hover {
+         color: rgb(241, 237, 237);
+
+      }
+
+      .anchors2 {
+         color: rgb(231, 9, 9);
+         text-decoration: none;
+         font-size: 20px;
+         margin-left: 10vh;
+         margin-top: 10vh;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .anchors2:hover {
+         color: rgb(241, 237, 237);
+
+      }
+
+      .anchors3 {
+         color: rgb(231, 9, 9);
+         text-decoration: none;
+         font-size: 20px;
+         margin-left: 10vh;
+         margin-top: 10vh;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .anchors3:hover {
+         color: rgb(241, 237, 237);
+      }
+
+      .search {
+         height: 45px;
+         margin-top: 9vh;
+         margin-left: 25vh;
+         border: 2px solid;
+         width: 200px;
+         border-radius: 8px;
+         color: rgb(231, 9, 9);
+         font-size: 20px;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         text-align: justify;
+         padding-left: 10px;
+         background-color: transparent;
+
+      }
+
+      .iam {
+         font-size: 40px;
+         margin-top: 37vh;
+         margin-left: 28vh;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         color: antiquewhite;
+      }
+
+      .name {
+         font-size: 60px;
+         color: rgb(230, 212, 124);
+         font-family: serif;
+         margin-left: 2vh;
+         margin-top: 30px;
+      }
+
+      .develpoer {
+         margin-left: 28vh;
+         color: antiquewhite;
+         font-size: 30px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         margin-top: -30px;
+      }
+
+      .contact-button {
+         background-color: transparent;
+         border-color: rgb(230, 212, 124);
+         width: 20vh;
+         height: 7vh;
+         margin-left: 28vh;
+         border-width: 4px;
+         border-radius: 8px;
+         color: rgb(230, 212, 124);
+         /* border-inline-style: inherit; */
+      }
+
+      .contact-button:hover {
+         color: goldenrod;
+      }
+
+      .second-row {
+         display: flex;
+      }
+
+      .dp {
+         width: 80vh;
+         height: 80vh;
+         border-radius: 15px;
+         filter: blur(0.px);
+         margin-left: 15vh;
+         position: relative;
+         display: block;
+         border: 1px solid transparent;
+         box-shadow: 0 0 -10px rgba(0, 0, 0, 0.5);
+         transition: box-shadow 0.3s ease-in-out;
+         margin-top: 20px;
+
+      }
+
+      .second-container {
+         border: 0px solid;
+         width: 206.5vh;
+         height: 110vh;
+         background-color: rgb(15, 9, 9);
+         position: relative;
+      }
+
+      .paragraph {
+         color: aliceblue;
+         font-size: 20px;
+         margin-top: 10vh;
+      }
+
+      .fullstack {
+         color: goldenrod;
+         margin-left: 20px;
+      }
+
+      .para1 {
+         width: 160vh;
+         
+         margin-left: 40vh;
+         font-family: 'Times New Roman', Times, serif;
+      }
+
+      .sign {
+         position: absolute;
+         width: 20vh;
+         height: 20vh;
+         margin-left: 100vh;
+         transform: rotate(23deg);
+      }
+
+      .skill-container {
+         /* border: 1px solid; */
+         width: 206.5vh;
+         height: 100vh;
+         background-color: rgb(17, 13, 13);
+
+      }
+
+      .skill {
+         /* margin-left: 85vh; */
+         font-size: 50px;
+         color: aliceblue;
+         text-align: center;
+         padding-top: 40px;
+
+      }
+
+      .image-group {
+         display: flex;
+      }
+
+      .html {
+         height: 20vh;
+         width: 30vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 39px;
+         cursor: pointer;
+      }
+
+      .html2 {
+         height: 30vh;
+         width: 40vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 33vh;
+      }
+
+      .html2:hover {
+         background-color: black;
+      }
+
+      .react {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 15vh;
+      }
+
+      .react2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .react:hover {
+         background-color: black;
+      }
+
+      .java {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 18vh;
+      }
+
+      .java2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .java:hover {
+         background-color: black;
+      }
+
+      .node {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 18vh;
+      }
+
+      .node2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .node:hover {
+         background-color: black;
+      }
+
+      .jquery {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 18vh;
+      }
+
+      .jquery2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .jquery:hover {
+         background-color: black;
+      }
+
+      .mongo {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 18vh;
+      }
+
+      .mongo2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .mongo:hover {
+         background-color: black;
+      }
+
+      .bootstrap {
+         height: 30vh;
+         width: 30vh;
+         border-radius: 39px;
+         background-color: transparent;
+         border-width: 0px;
+         margin-left: 18vh;
+      }
+
+      .bootstrap2 {
+         height: 22vh;
+         width: 22vh;
+         background-color: transparent;
+         border-width: 0px;
+         border-radius: 19px;
+         cursor: pointer;
+      }
+
+      .bootstrap:hover {
+         background-color: black;
+      }
+
+      .image-group {
+         margin-top: 10vh;
+      }
+
+      .logo {
+         height: 23vh;
+         width: 25vh;
+         margin-left: 20vh;
+         padding-top: 10vh;
+
+      }
+      .short{
+         margin-top: 20vh;
+      }
+
+      .about1 {
+         color: aliceblue;
+         padding-top: 30vh;
+         margin-left: 40vh;
+         font-size: 50px;
+      }
+
+      .port {
+         width: 206.5vh;
+         height: 100vh;
+         background-color: rgb(12, 2, 2);
+      }
+
+      .head-portfolio {
+         color: aliceblue;
+         text-align: center;
+         font-size: 60px;
+
+      }
+
+      .card {
+         background-color: rgb(8, 6, 6);
+         color: goldenrod;
+         border-color: antiquewhite;
+         margin-top: 10vh;
+      }
+
+      .contact-container {
+         height: 100vh;
+         background-color: black;
+         color: aliceblue;
+         
+      }
+
+      .contact {
+       padding-top: 10vh;
+       text-decoration-color: goldenrod;
+       text-decoration: underline;
+       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       margin-left: 90vh;
+      }
+
+     
+
+      .details-contact {
+         display: flex;
+         padding-top: 50px;
+         justify-content: center;
+         align-items: center;
+      }
+     
+
+      .bii {
+         margin-bottom: 30vh;
+      }
+
+      .btn-gmail {
+         height: 15vh;
+         width: 20vh;
+         background-color: black;
+         margin-left: 95vh;
+         cursor: pointer;
+         margin-top: 10vh;
+         justify-content: center;
+      align-items: center;
+      
+      }
+
+      .btn-g {
+         background-color: black;
+         border-width: 0px;
+
+
+      }
+
+      .details {
+         display: flex;
+         background-color: black;
+      }
+      .arrow{
+         width: 20vh;
+         height: 10vh;
+         background-color: black;
+      }
+      .btn-arrow{
+         background-color: black;
+         border-width: 0px;
+         border-color: black;
+         margin-top: 15vh;
+         margin-left: 4vh;
+      }
+    
+      
+      .btn-gmail:hover{
+         background-color: rgb(46, 46, 45);
+         border-radius: 10px;
+         width: 20vh;
+      }
+      .soft-card1{
+         width: 15vh;
+         height:15vh;
+         margin-left: 70vh; 
+         cursor: pointer; 
+         margin-top:10vh; 
+      }
+      .soft-card1:hover{
+         background-color: gray;
+         border-radius: 100px;
+      }
+      .soft-card2{
+         width: 29vh;
+         height:20vh;  
+         margin-left: 7vh; 
+         cursor: pointer;
+         justify-content: center;
+      align-items: center;
+      margin-top:10vh; 
+      }
+      .soft-card2:hover{
+         background-color: gray;
+         border-radius: 100px;
+      }
+      .soft-card3{
+         width: 24vh;
+         height: 20vh;  
+         margin-left: 1vh;
+         cursor: pointer; 
+         margin-top: 7vh;
+      }
+      .soft-card3:hover{
+         background-color: gray;
+         border-radius: 100px;
+      }
+      .twit{
+         height:20vh ;
+         width: 25vh;
+         margin-left: 93vh;
+         margin-top: 8vh;
+         cursor: pointer;
+      margin-left: 95vh;
+      }
+      .twit:hover{
+         background-color: gray;
+         border-radius: 100px;
+      }
+      .about-home{
+         margin-top: 10vh;
+         
+      }
+      .short-about{
+       color: rgb(48, 43, 43);
+      }
+   </style>
+</head>
+
+<body>
+   <div class="main-container">
+
+      <div class="nevbar" id="home">
+         <img src="logo-removebg-preview.png" class="logo" alt="">
+         <a href="#about" id="home" class="anchors1">About</a>
+         <a href="#skill" class=" anchors2"> Skills</a>
+         <a href="#qulification" class="anchors2">Qulifications</a>
+         <a href="#contact" class="anchors3">Contact</a>
+         <input type="text" placeholder="Search" class="search">
+      </div>
+      <div class="second-row">
+         <div>
+            <h3 class="iam">I'M <span class="name">Nikson Simon</span></h3>
+            <p class="develpoer"> full stack developer & consultant</p>
+            <button class="contact-button"> <a href=""></a>Contact Me</button>
+         </div>
+         <div>
+            <img src="11-removebg-preview.png" class="dp" alt="">
+         </div>
+      </div>
+   </div>
+   <div class="second-container" id="about">
+      <h1 class="about1">About</h1>
+      <div class="para1">
+
+         <p class="paragraph">Hi, I'm Nikson Simon, a passionate software developer dedicated to crafting clean,
+            efficient,
+            and scalable solutions. With expertise in<span class="fullstack">FULL STACK DEVELOPER[MERN]</span>, I thrive
+            on turning complex problems into seamless user experiences. I believe in continuous learning, and I’m always
+            exploring new technologies to stay ahead in this ever-evolving field. My goal is to build innovative
+            software
+            that drives success and makes a lasting impact."</p>
+         <img src="sign.me-removebg-preview (1).png" class="sign" alt="">
+         <div class="about-home">
+            <!-- <a href="#home"  class="short-about">Home</a> -->
+         </div>
+      </div>
+
+
+
+   </div>
+
+   <div class="skill-container" id="skill">
+      <div class="skill"> Skills</div>
+      <div class="image-group">
+         <button class="html2"><img src="html_css-removebg-preview.png" class="html" alt=""></button>
+         <button class="react"><img src="images-react-removebg-preview.png" class="react2" alt=""></button>
+         <button class="java"><img src="javascript-removebg-preview.png" class="java2" alt=""></button>
+      </div>
+      <div>
+         <button class="node"><img src="bootstrap-logo--removebg-preview.png" class="node2" alt=""></button>
+         <button class="jquery"><img src="jquery-removebg-preview.png" class="jquery2" alt=""></button>
+         <button class="mongo"><img src="mongo-removebg-preview.png" class="mongo2" alt=""></button>
+         <button class="bootstrap"><img src="OIP-removebg-preview (2).png" class="bootstrap2" alt=""></button>
+         <a href="#home" class="short"> home</a>
+      </div>
+   </div>
+   <div class="port" id="qulification">
+      <div>
+         <h1 class="head-portfolio">qulification</h1>
+         <div>
+            <div class="card text-center">
+               <div class="card-header">
+                  FULL STACK
+               </div>
+               <div class="card-body">
+                  <h5 class="card-title">MERN STACK</h5>
+                  <p class="card-text"> SkillHaara Tech Academy
+                     .</p>
+                  <a href="#" class="btn btn-primary">government of india(Skill India)</a>
+
+               </div>
+               <div class="card">
+                  <a href=""> https://skillhaara.com/aboutus</a>
+               </div>
+            </div>
+            <div>
+               <div class="card text-center">
+                  <div class="card-header">
+                     degree
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title">b.com</h5>
+                     <p class="card-text"> MEWAR university rajasthan india
+                        .</p>
+                     <a href="#" class="btn btn-primary">mewar university</a>
+                  </div>
+                  <div class="card">
+                     60% grade
+                  </div>
+               </div>
+               <div>
+                  <div class="card text-center">
+                     <div class="card-header">
+                        COMMERCE CO-OPRATION
+                     </div>
+                     <div class="card-body">
+                        <h5 class="card-title">plus two</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="#" class="btn btn-primary">kerala government school</a>
+                     </div>
+                     <div class="card">
+                        70% grade
+                     </div>
+                  </div>
+               </div>
+               <a href="#home"> Home</a>
+            </div>
+         </div>
+         <div class="contact-container">
+            <div>
+               <h1 class="contact" id="contact">my contacts </h1>
+            </div>
+            <div class="details">
+              
+                  <button class="btn-g"> <a href="mailto:niksonts31@gmail.com">  <img src="Gmail-logo.png" class="btn-gmail" alt="Gmail Logo">
+                  </a>
+                   
+                  </button>
+             
+            </div>
+            <div>
+               <a href=" https://wa.me/qr/QRLLIDD2PUP7M1 ">  <img class="soft-card1" src="whats-up.png" alt=""></a>
+              <a href="https://www.facebook.com/share/1E6TnZCUj1/"> <img class="soft-card2" src="facebook-removebg-preview.png" alt=""></a>
+              <a href="https://www.instagram.com/nixon_thadathil_simon?utm_source=qr&igsh=MTRmM3dydHY2cGRhNw== ">  <img class="soft-card3" src="insta..png" alt=""></a>
+             
+            </div>
+            <div>
+               <img class="twit" src="twit.png" alt="">
+            </div>
+            <a href="#home"> Home</a>
+         </div>
+</body>
+
+</html>
